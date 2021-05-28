@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/housingItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true">
+
+    <!-- TODO: PHASE 3.1 - Update the following UI to match the provided
+            designs. feel free to change anything you'd like, just make
+            sure to make the appropriate changes in the RecyclerView adapter -->
+
+    <ImageView
+        android:id="@+id/housingImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/housingImage">
+
+        <TextView
+            android:id="@+id/housingType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="APARTMENT"
+            android:textAllCaps="true"
+            android:textColor="#99000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="312 University Ave."
+            android:textColor="#000000"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/housingType" />
+
+        <TextView
+            android:id="@+id/addressState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Davis, CA"
+            android:textColor="#99000000"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_money"
+            android:fontFamily="@font/roboto_medium"
+            android:text="$3000"
+            android:textColor="#651FFF"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/perMonthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="/month"
+            android:textColor="#99000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price" />
+
+        <TextView
+            android:id="@+id/numOfBeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="4"
+            android:textSize="15dp"
+            app:drawableLeftCompat="@drawable/ic_bedroom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressState" />
+
+        <TextView
+            android:id="@+id/numOfBaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@drawable/ic_bathroom"
+            android:drawablePadding="5dp"
+            android:text="2"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/numOfBeds"
+            app:layout_constraintTop_toBottomOf="@id/addressState" />
+
+        <ImageView
+            android:id="@+id/covidTestedYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/check"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toRightOf="@id/numOfBaths"
+            app:layout_constraintTop_toBottomOf="@id/addressState"
+            app:tint="#99000000" />
+
+        <ImageView
+            android:id="@+id/covidTestedNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/x"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toRightOf="@id/numOfBaths"
+            app:layout_constraintTop_toBottomOf="@id/addressState"
+            app:tint="#99000000"/>
+
+
+        <TextView
+            android:id="@+id/covidTested"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:textColor="#99000000"
+            android:textSize="15dp"
+            android:text="Tested"
+            app:layout_constraintLeft_toRightOf="@id/numOfBaths"
+            app:layout_constraintTop_toBottomOf="@id/addressState" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

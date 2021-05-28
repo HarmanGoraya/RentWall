@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/housingItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- TODO: PHASE 3.3 - Display information for a Housing Listing
+                Make sure to include the respective Layouts and Views
+                needed to accomplish what you see on the prompt and designs -->
+
+    <ImageView
+        android:id="@+id/housingImageClicked"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/housingType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APARTMENT"
+            android:fontFamily="@font/roboto_medium"
+            android:textAllCaps="true"
+            android:textColor="#99000000"
+            app:layout_constraintTop_toBottomOf="@+id/housingImageClicked"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="312 University Ave."
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintTop_toBottomOf="@id/housingType"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/addressState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Davis, CA"
+            android:textColor="#99000000"
+            android:textSize="18dp"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_money"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#651FFF"
+            android:textSize="35dp"
+            android:text="$3000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/housingImageClicked"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/perMonthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="/month"
+            android:textColor="#99000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/features"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Features"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#99000000"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressState"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/numOfBeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="15dp"
+            app:drawableLeftCompat="@drawable/ic_bedroom"
+            android:text="4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/features"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/Bedrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bedrooms"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numOfBeds"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/numOfBaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:drawableLeft="@drawable/ic_bathroom"
+            android:drawablePadding="5dp"
+            android:textSize="15dp"
+            android:text="2"
+            app:layout_constraintLeft_toRightOf="@id/numOfBeds"
+            app:layout_constraintTop_toBottomOf="@id/features"/>
+
+        <TextView
+            android:id="@+id/Bathrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Bathrooms"
+            app:layout_constraintLeft_toRightOf="@id/numOfBeds"
+            app:layout_constraintTop_toBottomOf="@id/numOfBaths"/>
+
+        <ImageView
+            android:id="@+id/covidTestedYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/check"
+            android:layout_marginLeft="100dp"
+            app:layout_constraintLeft_toRightOf="@id/numOfBaths"
+            app:layout_constraintTop_toBottomOf="@id/features"
+            app:tint="#99000000" />
+
+        <ImageView
+            android:id="@+id/covidTestedNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/x"
+            android:layout_marginLeft="100dp"
+            app:layout_constraintLeft_toRightOf="@id/numOfBaths"
+            app:layout_constraintTop_toBottomOf="@id/features"
+            app:tint="#99000000"/>
+
+        <TextView
+            android:id="@+id/Tested"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tested"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toRightOf="@id/numOfBaths"
+            app:layout_constraintTop_toBottomOf="@id/features"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#99000000"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tested"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="desc"
+            android:fontFamily="sans-serif"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/moveIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Move-in Date"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#99000000"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desc"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:drawablePadding="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moveIn"
+            android:layout_marginStart="15dp"/>
+
+
+        <!-- TODO: PHASE 3.3 - Include a Button for launching an email application -->
+    <Button
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        style="@style/FormButton"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toBottomOf="@+id/moveIn"
+        app:layout_constraintBottom_toBottomOf="@id/datepublished"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/datepublished"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listing posted on "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

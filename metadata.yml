@@ -1,0 +1,14 @@
+---
+:id: 69510519
+:submitters:
+- :name: Harmandeep Goraya
+  :email: hsgoraya@ucdavis.edu
+- :name: Ruiyi He
+  :email: ruihe@ucdavis.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-12 06:28:22.695961000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2021-03-11 22:28:22.695961000 Z
+:status: processed
+:score: 92.5
